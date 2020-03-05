@@ -6,6 +6,7 @@
   "main": "dist/createx.umd.js",
   "module": "dist/createx.es5.js",
   "typings": "dist/types/createx.d.ts",
+  "private": false,
   "files": [
     "dist"
   ],

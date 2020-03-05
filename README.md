@@ -9,7 +9,7 @@ This library has the intention to help to generate code based on templates.
 ### Installation
 
 ```bash
-npm install createx
+npm install createx-generator
 ```
 
 ### Usage

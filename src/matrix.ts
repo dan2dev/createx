@@ -1,6 +1,6 @@
 import { Language } from "./helper";
 
-type MatrixResult<TData> = {
+export type MatrixResult<TData> = {
     rendered: string;
     language: Language;
 } & TData;

@@ -9,13 +9,13 @@ export abstract class Matrix<TData> {
     public constructor(data: TData) {
         this.data = data;
     }
-    public typescript?(data: TData): MatrixResult<TData>;
-    public html?(data: TData): MatrixResult<TData>;
-    public dart?(data: TData): MatrixResult<TData>;
-    public javascript?(data: TData): MatrixResult<TData>;
-    public csharp?(data: TData): MatrixResult<TData>;
-    public java?(data: TData): MatrixResult<TData>;
-    public swift?(data: TData): MatrixResult<TData>;
-    public kotlin?(data: TData): MatrixResult<TData>;
-    public css?(data: TData): MatrixResult<TData>;
+    public typescript?(): MatrixResult<TData>;
+    public html?(): MatrixResult<TData>;
+    public dart?(): MatrixResult<TData>;
+    public javascript?(): MatrixResult<TData>;
+    public csharp?(): MatrixResult<TData>;
+    public java?(): MatrixResult<TData>;
+    public swift?(): MatrixResult<TData>;
+    public kotlin?(): MatrixResult<TData>;
+    public css?(): MatrixResult<TData>;
 }

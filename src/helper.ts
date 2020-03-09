@@ -25,9 +25,10 @@ function extractRegionIndent(content: string) {
     }
     return r;
 }
+export type Language = "javascript" | "typescript" | "dart" | "csharp" | "java" | "swift" | "kotlin" | "css";
 export function region(regionName: string,
     content: string = "\\n",
-    language: "javascript" | "typescript" | "dart" | "csharp" | "java" | "swift" | "kotlin" | "css" = "javascript") {
+    language: Language = "javascript") {
     if (language === "css") {
         return `/* #region ${regionName} */
 ${content}

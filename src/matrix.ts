@@ -1,9 +1,10 @@
 import { Language } from "./helper";
 
-export type MatrixResult<TData, TResult> = {
+export type MatrixRenderResult<TResult> = {
     rendered: string;
     language: Language;
-} & TData & TResult;
+} & TResult;
+export type MatrixResult<TData, TResult> = TData & MatrixRenderResult<TResult>;
 export abstract class Matrix<TData, TResult> {
     public data: TData;
     public constructor(data: TData) { this.data = data; }

@@ -1,21 +1,19 @@
 import { Language } from "./helper";
 
-export type MatrixResult<TData> = {
+export type MatrixResult<TData, TResult> = {
     rendered: string;
     language: Language;
-} & TData;
-export abstract class Matrix<TData> {
+} & TData & TResult;
+export abstract class Matrix<TData, TResult> {
     public data: TData;
-    public constructor(data: TData) {
-        this.data = data;
-    }
-    public typescript?(): MatrixResult<TData>;
-    public html?(): MatrixResult<TData>;
-    public dart?(): MatrixResult<TData>;
-    public javascript?(): MatrixResult<TData>;
-    public csharp?(): MatrixResult<TData>;
-    public java?(): MatrixResult<TData>;
-    public swift?(): MatrixResult<TData>;
-    public kotlin?(): MatrixResult<TData>;
-    public css?(): MatrixResult<TData>;
+    public constructor(data: TData) { this.data = data; }
+    public typescript?(): MatrixResult<TData, TResult>;
+    public html?(): MatrixResult<TData, TResult>;
+    public dart?(): MatrixResult<TData, TResult>;
+    public javascript?(): MatrixResult<TData, TResult>;
+    public csharp?(): MatrixResult<TData, TResult>;
+    public java?(): MatrixResult<TData, TResult>;
+    public swift?(): MatrixResult<TData, TResult>;
+    public kotlin?(): MatrixResult<TData, TResult>;
+    public css?(): MatrixResult<TData, TResult>;
 }
